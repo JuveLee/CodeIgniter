@@ -11,7 +11,7 @@ Release Date: Not Released
 
    -  Officially dropped any kind of support for anything under PHP 5.4.8.
    -  Updated Welcome view and HTML error templates with new styling.
-   -  Updated configurable directory paths to handle missing trailing ``DIRECTORY_SEPARATOR``s automatically.
+   -  Updated configurable directory paths to handle missing trailing ``DIRECTORY_SEPARATOR`` automatically.
 
 -  Core
 
@@ -21,6 +21,7 @@ Release Date: Not Released
    -  Removed previously deprecated :doc:`Config Library <libraries/config>` method ``system_url()`` (encourages insecure practices).
    -  Changed :doc:`URI Library <libraries/uri>` to ignore the ``$config['url_suffix']``, ``$config['permitted_uri_chars']`` configuration settings for CLI requests.
    -  Changed :doc:`Loader <libraries/loader>` method ``model()`` to always check if the loaded class extends ``CI_Model``.
+   -  Changed :doc:`Output Library <libraries/output>` method ``_display()`` default parameter value to ``NULL`` instead of empty string.
 
    -  :doc:`Input Library <libraries/input>` changes include:
 
@@ -77,6 +78,7 @@ Release Date: Not Released
    -  :doc:`Query Builder <database/query_builder>`:
 
       - Added methods ``having_in()``, ``or_having_in()``, ``not_having_in()``, ``or_not_having_in()``.
+      - Updated method ``join()`` to allow accepting ``NATURAL`` clauses in its third parameter.
       - Updated logic to allow dots in alias names.
 
 -  Helpers
@@ -87,7 +89,7 @@ Release Date: Not Released
    -  Removed previously deprecated :doc:`Security Helper <helpers/security_helper>` function ``do_hash()`` (use PHP's native ``hash()`` instead).
    -  Removed previously deprecated :doc:`File Helper <helpers/file_helper>` function ``read_file()`` (use PHP's native ``file_get_contents()`` instead).
    -  Added new function :php:func:`ordinal_format()` to :doc:`Inflector Helper <helpers/inflector_helper>`.
-   -  Added 'img_alt' option to :php:func`create_captcha()` :doc:`CAPTCHA Helper` with a default value of 'captcha'.
+   -  Added 'img_alt' option to :php:func`create_captcha()` :doc:`CAPTCHA Helper <helpers/captcha_helper>` with a default value of 'captcha'.
 
    -  :doc:`Download Helper <helpers/download_helper>` changes include:
 
